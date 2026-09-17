@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05070c" />
+  <meta name="description" content="SEMBLE — a speculative coordination codex for nested worlds, human signal, stewardship, Gratus verification, and accountable AI." />
+  <title>SEMBLE // Simulation Coordination Codex</title>
+  <style>
+    :root{
+      --bg:#05070c;--bg2:#090d17;--glass:rgba(255,255,255,.055);--glass2:rgba(255,255,255,.085);
+      --line:rgba(255,255,255,.12);--text:#f7fbff;--muted:#94a3b8;--cyan:#46e5ff;--cyan2:#96f2ff;
+      --violet:#9a7cff;--magenta:#ff5bce;--red:#ff4d6d;--green:#5ff0a5;--gold:#ffd47a;
+      --shadow:0 30px 120px rgba(0,0,0,.45);--r:28px;--r2:18px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:
+      radial-gradient(circle at 12% 12%,rgba(70,229,255,.12),transparent 24%),
+      radial-gradient(circle at 87% 18%,rgba(154,124,255,.14),transparent 24%),
+      radial-gradient(circle at 50% 75%,rgba(255,91,206,.08),transparent 28%),
+      linear-gradient(180deg,#04060a 0%,#080b13 48%,#04060a 100%);
+      color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,black,transparent 88%)}
+    a{color:inherit;text-decoration:none}.shell{width:min(1180px,calc(100% - 36px));margin:auto}.nav{position:sticky;top:14px;z-index:40;margin:14px auto 0;width:min(1180px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 12px 10px 16px;border:1px solid var(--line);border-radius:22px;background:rgba(7,10,17,.72);backdrop-filter:blur(18px) saturate(130%);box-shadow:0 12px 40px rgba(0,0,0,.25)}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.14em;font-size:.86rem}.mark{width:32px;height:32px;position:relative;filter:drop-shadow(0 0 15px rgba(70,229,255,.35))}.mark span{position:absolute;border:2px solid var(--cyan);border-radius:50%}.mark span:nth-child(1){width:25px;height:12px;left:3px;top:2px;transform:rotate(-13deg)}.mark span:nth-child(2){width:25px;height:12px;left:1px;top:13px;transform:rotate(48deg);border-color:var(--violet)}.mark span:nth-child(3){width:25px;height:12px;left:7px;top:17px;transform:rotate(-48deg);border-color:var(--magenta)}
+    .links{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}.links a{padding:9px 11px;color:var(--muted);font-size:.82rem;border-radius:12px}.links a:hover{color:white;background:rgba(255,255,255,.06)}
+    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(70,229,255,.22);background:rgba(70,229,255,.07);color:var(--cyan2);border-radius:999px;padding:8px 12px;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan)}
+    .hero{padding:112px 0 70px;position:relative}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}.eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan2);font-weight:800;margin-bottom:18px}.hero h1{font-size:clamp(3.6rem,8.8vw,8.7rem);letter-spacing:-.075em;line-height:.81;margin:0 0 26px;font-weight:850}.hero h1 .ghost{-webkit-text-stroke:1px rgba(255,255,255,.48);color:transparent}.hero p{font-size:clamp(1.08rem,2vw,1.33rem);line-height:1.62;color:#bcc7d5;max-width:690px}.hero .thesis{font-size:clamp(1.15rem,2.15vw,1.6rem);color:white;max-width:790px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{padding:13px 17px;border-radius:15px;border:1px solid var(--line);background:var(--glass);font-weight:750;font-size:.92rem}.btn.primary{background:linear-gradient(135deg,rgba(70,229,255,.2),rgba(154,124,255,.18));border-color:rgba(70,229,255,.34);box-shadow:0 0 35px rgba(70,229,255,.12)}
+    .world{position:relative;min-height:520px;display:grid;place-items:center}.orb{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 50px rgba(255,255,255,.02)}.orb.o1{width:390px;height:390px;animation:spin 25s linear infinite}.orb.o2{width:290px;height:290px;border-color:rgba(70,229,255,.24);animation:spin 18s linear infinite reverse}.orb.o3{width:185px;height:185px;border-color:rgba(154,124,255,.35);animation:spin 13s linear infinite}.orb:before,.orb:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;top:50%;left:-5px;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.orb:after{left:auto;right:-5px;background:var(--violet);box-shadow:0 0 20px var(--violet)}@keyframes spin{to{transform:rotate(360deg)}}
+    .core{width:128px;height:128px;border-radius:36px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(70,229,255,.17),rgba(154,124,255,.12));border:1px solid rgba(255,255,255,.18);box-shadow:0 0 75px rgba(70,229,255,.18),inset 0 0 45px rgba(255,255,255,.04);backdrop-filter:blur(16px);font-size:.76rem;letter-spacing:.16em;text-align:center;font-weight:850}.world-label{position:absolute;padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(7,10,17,.7);backdrop-filter:blur(10px);font-size:.72rem;color:#d9e6ef}.wl1{top:70px;right:35px}.wl2{bottom:80px;left:25px}.wl3{bottom:145px;right:20px}
+    .notice{margin-top:34px;padding:14px 16px;border-radius:16px;border:1px solid rgba(255,212,122,.18);background:rgba(255,212,122,.055);color:#d8c79e;font-size:.87rem;line-height:1.55}.notice b{color:#ffe8b5}
+    section{padding:78px 0}.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--cyan2);font-weight:850}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}.section-head h2{font-size:clamp(2.2rem,5vw,4.9rem);line-height:.95;letter-spacing:-.055em;margin:9px 0 0}.section-head p{max-width:520px;color:var(--muted);line-height:1.6;margin:0}
+    .glass{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.064),rgba(255,255,255,.032));box-shadow:var(--shadow);backdrop-filter:blur(16px)}
+    .axioms{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.axiom{padding:24px;min-height:195px;position:relative;overflow:hidden}.axiom:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-55px;top:-55px;background:radial-gradient(circle,rgba(70,229,255,.18),transparent 65%)}.num{font-size:.72rem;letter-spacing:.15em;color:var(--cyan2);font-weight:850}.axiom h3{margin:28px 0 9px;font-size:1.17rem}.axiom p{margin:0;color:var(--muted);line-height:1.52;font-size:.9rem}
+    .progression{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}.step{padding:20px;position:relative;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}.step:not(:last-child):after{content:"→";position:absolute;right:-13px;top:48%;z-index:5;color:var(--cyan2);font-size:1.2rem}.step .mini{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}.step h3{font-size:1.25rem;letter-spacing:-.03em;margin:9px 0}.step p{font-size:.85rem;line-height:1.5;color:#aab7c6;margin:0}.step .unlock{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:.74rem;color:var(--cyan2)}
+    .legend{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.legend span{font-size:.72rem;border:1px solid var(--line);padding:7px 10px;border-radius:999px;color:#b7c3d0}.map-wrap{padding:20px;overflow:auto}.systems-map{position:relative;min-width:1000px;height:820px;border-radius:22px;background:radial-gradient(circle at 50% 50%,rgba(70,229,255,.055),transparent 32%),rgba(0,0,0,.08);overflow:hidden}.gridlines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.023) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.023) 1px,transparent 1px);background-size:32px 32px}.node{position:absolute;width:170px;min-height:92px;border-radius:20px;padding:14px 14px 12px;border:1px solid var(--line);background:rgba(9,13,23,.88);backdrop-filter:blur(12px);box-shadow:0 16px 42px rgba(0,0,0,.28);z-index:3;transition:.2s transform,.2s border-color}.node:hover{transform:translateY(-4px);border-color:rgba(70,229,255,.4)}.node strong{display:block;font-size:.88rem}.node small{display:block;margin-top:7px;color:var(--muted);line-height:1.35}.node .type{font-size:.62rem;color:var(--cyan2);letter-spacing:.13em;text-transform:uppercase;margin-bottom:7px}.n-mover{left:35px;top:272px}.n-vibe{left:225px;top:105px}.n-semble{left:415px;top:110px}.n-builder{left:225px;top:432px}.n-first{left:425px;top:440px}.n-steward{left:620px;top:106px}.n-stage{left:620px;top:430px}.n-together{left:810px;top:265px;border-color:rgba(154,124,255,.35);box-shadow:0 0 48px rgba(154,124,255,.09)}.n-same{left:225px;top:650px;border-color:rgba(70,229,255,.28)}.n-gratus{left:425px;top:650px;border-color:rgba(255,212,122,.35);box-shadow:0 0 42px rgba(255,212,122,.08)}.n-ai-guide{left:625px;top:650px;border-color:rgba(95,240,165,.32);box-shadow:0 0 42px rgba(95,240,165,.07)}
+    svg.edges{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}.edge{fill:none;stroke:rgba(70,229,255,.28);stroke-width:2;stroke-dasharray:7 7;animation:dash 25s linear infinite}.edge.trust{stroke:rgba(154,124,255,.34)}.edge.story{stroke:rgba(255,91,206,.27)}.edge.resource{stroke:rgba(95,240,165,.25)}.edge.accountability{stroke:rgba(255,212,122,.36)}@keyframes dash{to{stroke-dashoffset:-200}}
+    .codex{display:grid;grid-template-columns:1fr 1fr;gap:14px}.term{padding:22px;display:grid;grid-template-columns:54px 1fr;gap:16px}.glyph{height:54px;width:54px;border-radius:17px;display:grid;place-items:center;border:1px solid rgba(70,229,255,.22);background:rgba(70,229,255,.06);font-weight:900;color:var(--cyan2)}.term h3{margin:1px 0 6px;font-size:1.1rem}.term p{margin:0;color:var(--muted);line-height:1.5;font-size:.88rem}.term .rule{margin-top:11px;color:#dce9f2;font-size:.78rem}
+    .trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.profile{padding:24px}.bars{display:grid;gap:14px;margin-top:22px}.bar-row{display:grid;grid-template-columns:105px 1fr 42px;gap:12px;align-items:center;font-size:.78rem}.track{height:7px;background:rgba(255,255,255,.07);border-radius:99px;overflow:hidden}.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--violet))}.charter{padding:24px}.charter-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.charter-item{border:1px solid var(--line);border-radius:15px;padding:13px;font-size:.82rem;color:#c8d3df;background:rgba(255,255,255,.025)}.charter-item b{color:white}
+    .account-stack{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.role-card{padding:24px;min-height:260px;position:relative;overflow:hidden}.role-card:before{content:"";position:absolute;inset:auto -60px -70px auto;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(70,229,255,.13),transparent 66%)}.role-card h3{font-size:1.35rem;margin:12px 0 8px}.role-card p{color:var(--muted);line-height:1.55;font-size:.9rem}.role-card .scope{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.5;color:#dbe7ef}.role-card .scope b{color:var(--green)}
+    .trust-loop{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:16px}.trust-loop .loop-step{min-height:82px}.trust-loop .loop-step:nth-child(4){border-color:rgba(154,124,255,.34);box-shadow:0 0 34px rgba(154,124,255,.07)}
+    .receipt{margin-top:16px;padding:24px;display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.receipt h3{font-size:1.7rem;margin:9px 0 10px}.receipt p{color:var(--muted);line-height:1.58}.receipt-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.receipt-item{padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);font-size:.78rem;color:#c8d4df}.receipt-item b{display:block;color:white;margin-bottom:4px}
+    .ai-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.ai-card{padding:24px}.ai-card h3{font-size:1.55rem;margin:10px 0}.ai-card p{color:var(--muted);line-height:1.58}.assurance-list{display:grid;gap:9px;margin-top:18px}.assurance-row{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.assurance-row .idx{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:rgba(154,124,255,.09);color:#d8ceff;font-weight:850}.assurance-row b{display:block;margin-bottom:3px}.assurance-row span{font-size:.78rem;color:var(--muted);line-height:1.45}.two-key{margin-top:16px;padding:18px;border-radius:18px;border:1px solid rgba(255,212,122,.22);background:rgba(255,212,122,.055);color:#f4e1b5;line-height:1.55;font-size:.88rem}.two-key b{color:white}
+    .guardrails{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.guardrail{padding:16px;border-radius:17px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:.8rem;line-height:1.48;color:#c6d2dd}.guardrail b{display:block;color:white;margin-bottom:5px}
+    .modes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mode{padding:24px;min-height:210px}.mode h3{margin:12px 0 8px}.mode p{color:var(--muted);line-height:1.55;font-size:.88rem}.mode.active{border-color:rgba(70,229,255,.32);box-shadow:0 0 60px rgba(70,229,255,.07)}
+    .problems{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.problem{padding:22px}.problem-top{display:flex;align-items:center;justify-content:space-between;gap:15px}.risk{font-size:.66rem;text-transform:uppercase;letter-spacing:.13em;color:var(--red);border:1px solid rgba(255,77,109,.25);background:rgba(255,77,109,.06);padding:6px 9px;border-radius:999px}.problem h3{font-size:1.05rem;margin:0}.problem p{color:var(--muted);font-size:.87rem;line-height:1.5}.counter{border-top:1px solid var(--line);padding-top:12px;margin-top:14px;color:#dfeaf2;font-size:.8rem}.counter b{color:var(--green)}
+    .loop{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.loop-step{padding:16px 11px;text-align:center;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.035);font-size:.8rem;min-height:95px;display:flex;align-items:center;justify-content:center;position:relative}.loop-step:not(:last-child):after{content:"›";position:absolute;right:-9px;color:var(--cyan2);font-size:1.25rem;z-index:4}.first-card{margin-top:16px;padding:25px;display:grid;grid-template-columns:1fr .8fr;gap:20px}.metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.metric strong{display:block;font-size:1.5rem;color:white}.metric span{font-size:.75rem;color:var(--muted)}
+    .principle{margin-top:20px;padding:22px;border-radius:20px;border:1px solid rgba(95,240,165,.22);background:rgba(95,240,165,.055);font-size:1.1rem;line-height:1.55;color:#dcfcec}.principle b{color:white}.footer{padding:65px 0 55px;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;border-top:1px solid var(--line);padding-top:28px}.footer h3{font-size:2rem;color:white;margin:0 0 8px;letter-spacing:-.04em}.tiny{font-size:.74rem;line-height:1.55;max-width:680px}
+    .reveal{opacity:0;transform:translateY(18px);transition:.65s ease}.reveal.in{opacity:1;transform:none}
+    @media(max-width:900px){.hero-grid,.trust-grid,.first-card,.receipt,.ai-grid{grid-template-columns:1fr}.account-stack{grid-template-columns:1fr}.guardrails{grid-template-columns:1fr 1fr}.world{min-height:430px}.axioms{grid-template-columns:1fr 1fr}.progression{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}.codex,.problems{grid-template-columns:1fr}.modes{grid-template-columns:1fr}.loop,.trust-loop{grid-template-columns:1fr 1fr 1fr}.loop-step:after{display:none}.links{display:none}.hero{padding-top:78px}.section-head{align-items:start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:580px){.shell{width:min(100% - 24px,1180px)}.nav{top:8px}.hero h1{font-size:3.65rem}.world{min-height:360px}.orb.o1{width:310px;height:310px}.orb.o2{width:235px;height:235px}.orb.o3{width:155px;height:155px}.core{width:112px;height:112px}.wl1{top:35px;right:2px}.wl2{bottom:40px;left:0}.wl3{bottom:95px;right:0}.axioms,.progression{grid-template-columns:1fr}.codex{grid-template-columns:1fr}.charter-grid{grid-template-columns:1fr}.loop,.trust-loop{grid-template-columns:1fr 1fr}.guardrails,.receipt-grid{grid-template-columns:1fr}.bar-row{grid-template-columns:88px 1fr 35px}.term{grid-template-columns:46px 1fr}.glyph{width:46px;height:46px}.section-head h2{font-size:2.6rem}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#top" aria-label="Semble home"><span class="mark"><span></span><span></span><span></span></span> SEMBLE // CODEX</a>
+    <div class="links"><a href="#axioms">Axioms</a><a href="#map">System Map</a><a href="#codex">Codex</a><a href="#trust">Trust</a><a href="#gratus">Gratus</a><a href="#ai-assurance">AI Assurance</a><a href="#first-movers">First Movers</a></div>
+    <span class="pill"><span class="dot"></span> Map v0.2</span>
+  </nav>
+
+  <main id="top">
+    <header class="hero shell">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">A speculative coordination model for nested worlds</div>
+          <h1>THE <span class="ghost">MAP</span><br>OF SEMBLE.</h1>
+          <p class="thesis">A codex for how people form vibes, become sembles, earn stewardship, test ideas with first movers, build stages, and federate into larger <em>togethers</em>—without confusing the map for the territory.</p>
+          <div class="actions"><a class="btn primary" href="#map">Enter the systems map</a><a class="btn" href="#codex">Open the codex</a></div>
+          <div class="notice"><b>Epistemic anchor:</b> this site treats “simulation” as a speculative lens and systems metaphor, not an established fact about reality. The governance ideas are designed to remain useful whether the universe is simulated, physical, virtual, or something else entirely.</div>
+        </div>
+        <div class="world" aria-label="Nested world visualization">
+          <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+          <div class="core">SEMBLE<br>TOGETHER</div>
+          <span class="world-label wl1">STORY LAYER</span><span class="world-label wl2">SIGNAL LAYER</span><span class="world-label wl3">TRUST LAYER</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="axioms" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Foundation</div><h2>Eight axioms<br>before scale.</h2></div><p>If the model ever grows to millions—or imagined worlds within worlds—these rules keep power legible and human agency intact.</p></div>
+      <div class="axioms">
+        <article class="glass axiom"><span class="num">AXIOM 01</span><h3>The map is not the territory.</h3><p>Models guide attention. They do not become evidence merely because they are elegant, emotionally powerful, or widely shared.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 02</span><h3>People are participants, not property.</h3><p>No steward, provider, platform, or “world owner” owns a human being. Membership is consentful and revocable.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 03</span><h3>Agency before alignment.</h3><p>Coordination should increase the ability to choose, speak, leave, fork, and disagree—not quietly remove those options.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 04</span><h3>Trust is plural.</h3><p>Replace one opaque reputation score with visible dimensions: care, clarity, reliability, reciprocity, transparency, and respect for agency.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 05</span><h3>Layers may nest. Accountability cannot disappear.</h3><p>A chain of providers or stewards must never become a chain of excuses. Every layer needs ownership of decisions and an appeal path.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 06</span><h3>Signal must stay honest.</h3><p>First movers test reality. They are not an army for manufactured hype, fake reviews, coercive growth, or artificial consensus.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 07</span><h3>Stories are infrastructure.</h3><p>Stories coordinate attention and meaning. Treat narrative power with the same care as code, money, identity, and compute.</p></article>
+        <article class="glass axiom"><span class="num">AXIOM 08</span><h3>Powerful AI must remain accountable to people.</h3><p>Systems that recommend, rank, moderate, transact, or act need declared scope, traceable decisions, independent evaluation, incident records, and meaningful human recourse.</p></article>
+      </div>
+    </section>
+
+    <section class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Progression</div><h2>From a vibe<br>to a together.</h2></div><p>This is the core Semble progression. Authority is earned through contribution and stewardship, not granted by claiming ownership of a world.</p></div>
+      <div class="progression">
+        <article class="glass step"><div><span class="mini">01 · Seed</span><h3>Vibe</h3><p>A first signal, question, aesthetic, mission, or tiny social world. A vibe is an invitation—not yet an institution.</p></div><div class="unlock">Unlock → coherent shared purpose</div></article>
+        <article class="glass step"><div><span class="mini">02 · Group</span><h3>Semble</h3><p>A self-selected group of people coordinating around a shared move, practice, question, product, or place.</p></div><div class="unlock">Unlock → repeated participation</div></article>
+        <article class="glass step"><div><span class="mini">03 · Responsibility</span><h3>Semble Steward</h3><p>An accountable facilitator who tends conditions for trust, participation, safety, and meaningful movement.</p></div><div class="unlock">Unlock → earned & reviewable trust</div></article>
+        <article class="glass step"><div><span class="mini">04 · Federation</span><h3>Semble Together</h3><p>Multiple sembles or stewards federating under shared protocols while preserving local autonomy and the right to leave.</p></div><div class="unlock">Unlock → interoperable governance</div></article>
+        <article class="glass step"><div><span class="mini">05 · Network</span><h3>Together ↔ Together</h3><p>A network of federations exchanging signal, stories, resources, and standards without requiring a single ultimate controller.</p></div><div class="unlock">Goal → coordination without capture</div></article>
+      </div>
+    </section>
+
+    <section id="map" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">System Map</div><h2>How the world<br>moves.</h2></div><p>Five flows move through the system: <b>signal</b>, <b>trust</b>, <b>agency</b>, <b>resources</b>, and <b>stories</b>. No single flow is allowed to become total power.</p></div>
+      <div class="legend"><span>— — Signal</span><span>Violet = trust</span><span>Pink = story</span><span>Green = resources</span><span>Gold = accountability</span></div>
+      <div class="glass map-wrap">
+        <div class="systems-map">
+          <div class="gridlines"></div>
+          <svg class="edges" viewBox="0 0 1000 820" preserveAspectRatio="none" aria-hidden="true">
+            <path class="edge" d="M200 320 C235 270,245 205,300 160"/><path class="edge" d="M395 155 C430 150,450 150,500 155"/>
+            <path class="edge trust" d="M585 155 C630 150,665 150,705 155"/><path class="edge trust" d="M790 185 C845 215,845 260,870 300"/>
+            <path class="edge resource" d="M200 340 C245 390,265 450,300 480"/><path class="edge" d="M395 485 C445 485,455 485,500 485"/>
+            <path class="edge story" d="M585 480 C635 475,665 475,705 475"/><path class="edge story" d="M790 445 C840 410,850 360,875 335"/>
+            <path class="edge" d="M505 205 C505 285,505 360,510 438"/><path class="edge trust" d="M705 205 C705 285,705 360,705 430"/>
+            <path class="edge story" d="M315 205 C315 285,315 360,315 430"/>
+            <path class="edge" d="M310 525 C310 575,310 610,310 650"/>
+            <path class="edge accountability" d="M510 535 C510 585,510 610,510 650"/>
+            <path class="edge accountability" d="M705 525 C665 575,600 610,510 650"/>
+            <path class="edge accountability" d="M870 365 C820 505,700 610,510 650"/>
+            <path class="edge resource" d="M705 525 C705 575,705 610,705 650"/>
+            <path class="edge trust" d="M310 650 C390 585,515 560,620 180"/>
+          </svg>
+          <div class="node n-mover"><div class="type">Human layer</div><strong>Mover</strong><small>Chooses, joins, leaves, builds, tests, tells stories.</small></div>
+          <div class="node n-vibe"><div class="type">Seed layer</div><strong>Vibe</strong><small>A first signal or tiny world worth gathering around.</small></div>
+          <div class="node n-semble"><div class="type">Community layer</div><strong>Semble</strong><small>A group coordinating around a shared move.</small></div>
+          <div class="node n-builder"><div class="type">Build layer</div><strong>Semble Builder</strong><small>Creates tools, rituals, products, spaces, and interfaces.</small></div>
+          <div class="node n-first"><div class="type">Signal layer</div><strong>First Movers</strong><small>Opt-in early users who battle-test reality and return honest signal.</small></div>
+          <div class="node n-steward"><div class="type">Governance layer</div><strong>Semble Steward</strong><small>Tends conditions. Holds responsibility, not ownership of people.</small></div>
+          <div class="node n-stage"><div class="type">Story layer</div><strong>Semble Stage</strong><small>Where moves, decisions, builds, context, and stories become visible.</small></div>
+          <div class="node n-together"><div class="type">Federation layer</div><strong>Semble Together</strong><small>A high-trust federation of sembles with explicit protocols and exits.</small></div>
+          <div class="node n-same"><div class="type">Alignment layer</div><strong>Same Page Operators</strong><small>Keep intent, decisions, dissent, responsibilities, and next moves legible.</small></div>
+          <div class="node n-gratus"><div class="type">Accountability layer</div><strong>Gratus Guides</strong><small>Verify claims, review evidence, train stewards, witness corrections, and support appeals.</small></div>
+          <div class="node n-ai-guide"><div class="type">AI assurance layer</div><strong>AI Gratus Guides</strong><small>Evaluate AI scope, tests, controls, incidents, provenance, and human recourse.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="codex" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Codex</div><h2>The building<br>blocks.</h2></div><p>A vocabulary that works as product architecture, community language, and speculative worldbuilding—without requiring literal claims about hidden simulation providers.</p></div>
+      <div class="codex">
+        <article class="glass term"><div class="glyph">V</div><div><h3>Vibe</h3><p>The smallest unit of shared direction: a feeling plus a possibility plus an invitation.</p><div class="rule">Rule: a vibe can be joined without surrendering identity.</div></div></article>
+        <article class="glass term"><div class="glyph">S</div><div><h3>Semble</h3><p>A living group formed around a move. Smaller than an institution; more coherent than an audience.</p><div class="rule">Rule: every Semble states what it is for—and what it is not.</div></div></article>
+        <article class="glass term"><div class="glyph">B</div><div><h3>Semble Builder</h3><p>A person or agent who turns needs into artifacts: apps, events, protocols, prompts, tools, spaces, and experiences.</p><div class="rule">Rule: builders expose assumptions and invite testing.</div></div></article>
+        <article class="glass term"><div class="glyph">⚑</div><div><h3>Semble Steward</h3><p>A trusted facilitator entrusted with care, governance, translation, conflict navigation, and continuity.</p><div class="rule">Rule: stewardship is reviewable, revocable, and bounded.</div></div></article>
+        <article class="glass term"><div class="glyph">◉</div><div><h3>Semble Stage</h3><p>The public surface: live builds, decisions, demos, stories, retrospectives, and accountable visibility.</p><div class="rule">Rule: attention cannot substitute for evidence.</div></div></article>
+        <article class="glass term"><div class="glyph">FM</div><div><h3>First Movers</h3><p>A standing corps of respectful early users who test products, experiences, and decisions before scale.</p><div class="rule">Rule: signal is purchased; praise is not.</div></div></article>
+        <article class="glass term"><div class="glyph">∞</div><div><h3>Semble Together</h3><p>A federation: multiple communities coordinating on shared protocols, pooled resources, or common missions.</p><div class="rule">Rule: federation must preserve local voice and exit.</div></div></article>
+        <article class="glass term"><div class="glyph">↔</div><div><h3>Provider / Relay</h3><p>Any layer supplying infrastructure, compute, identity, distribution, discovery, or connectivity to others.</p><div class="rule">Rule: dependencies should be visible and portable where possible.</div></div></article>
+        <article class="glass term"><div class="glyph">GG</div><div><h3>Gratus Guide</h3><p>An independent trust witness who verifies claims, reviews stewardship evidence, mentors stewards, and helps participants challenge or appeal decisions.</p><div class="rule">Rule: guides may inspect and attest; they do not own the people or systems they review.</div></div></article>
+        <article class="glass term"><div class="glyph">SP</div><div><h3>Same Page Operator</h3><p>A coordination specialist who makes shared intent, definitions, commitments, decisions, disagreements, and next moves legible to everyone affected.</p><div class="rule">Rule: alignment is documented, never presumed.</div></div></article>
+        <article class="glass term"><div class="glyph">AG</div><div><h3>AI Gratus Guide</h3><p>A specialized verifier for AI systems: evaluates declared purpose, limitations, test evidence, deployment controls, incidents, and human recourse.</p><div class="rule">Rule: AI may assist evaluation; contested human-impact decisions require accountable human review.</div></div></article>
+      </div>
+    </section>
+
+    <section id="trust" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Trust Architecture</div><h2>Trust without<br>the trap.</h2></div><p>A respected review system should not collapse a human or steward into one number. Show dimensions, evidence, context, and recency.</p></div>
+      <div class="trust-grid">
+        <article class="glass profile"><div class="pill"><span class="dot"></span> Example steward profile</div><div class="bars">
+          <div class="bar-row"><span>Care</span><div class="track"><div class="fill" style="width:94%"></div></div><b>94</b></div>
+          <div class="bar-row"><span>Clarity</span><div class="track"><div class="fill" style="width:88%"></div></div><b>88</b></div>
+          <div class="bar-row"><span>Reliability</span><div class="track"><div class="fill" style="width:91%"></div></div><b>91</b></div>
+          <div class="bar-row"><span>Reciprocity</span><div class="track"><div class="fill" style="width:86%"></div></div><b>86</b></div>
+          <div class="bar-row"><span>Transparency</span><div class="track"><div class="fill" style="width:90%"></div></div><b>90</b></div>
+          <div class="bar-row"><span>Agency</span><div class="track"><div class="fill" style="width:97%"></div></div><b>97</b></div>
+        </div><div class="notice">These numbers are interface examples, not claims about a real person. A production system should show underlying evidence, sample size, provenance, confidence, and appeal history.</div></article>
+        <article class="glass charter"><div class="kicker">Steward Charter</div><h3 style="font-size:1.7rem;margin:10px 0 0">Ten commitments.</h3><div class="charter-grid">
+          <div class="charter-item"><b>01.</b> No ownership of people.</div><div class="charter-item"><b>02.</b> Informed participation.</div>
+          <div class="charter-item"><b>03.</b> Real right to leave.</div><div class="charter-item"><b>04.</b> Declare incentives.</div>
+          <div class="charter-item"><b>05.</b> No hidden coercion.</div><div class="charter-item"><b>06.</b> Protect privacy.</div>
+          <div class="charter-item"><b>07.</b> Log material decisions.</div><div class="charter-item"><b>08.</b> Offer review & appeal.</div>
+          <div class="charter-item"><b>09.</b> Label fact / model / story.</div><div class="charter-item"><b>10.</b> Preserve human override.</div>
+        </div></article>
+      </div>
+    </section>
+
+    <section id="gratus" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Gratus Protocol</div><h2>Trust needs<br>witnesses.</h2></div><p>Gratus becomes Semble’s accountability and verification layer. Same Page remains the alignment layer. They collaborate—but neither is allowed to become the other.</p></div>
+      <div class="account-stack">
+        <article class="glass role-card"><span class="pill">Verification · Accountability</span><h3>Gratus Guides</h3><p>Trusted reviewers who examine evidence, verify public claims, mentor stewards, surface conflicts of interest, witness corrections, and help participants navigate appeals.</p><div class="scope"><b>Authority boundary:</b> may verify, challenge, publish findings, and recommend correction. They do not secretly rank everyone, seize stewardship, or become an unappealable court.</div></article>
+        <article class="glass role-card"><span class="pill">Alignment · Coordination</span><h3>Same Page Operators</h3><p>Facilitators who keep intent, definitions, decisions, responsibilities, disagreements, and next moves visible across a Semble or Together.</p><div class="scope"><b>Authority boundary:</b> may clarify and document. They cannot manufacture consensus or rewrite dissent into agreement.</div></article>
+        <article class="glass role-card"><span class="pill">Safety · Incident response</span><h3>Gratus Guardians</h3><p>A narrow emergency specialization for protecting people and systems when a material safety or integrity incident is active. Their interventions are temporary, logged, and reviewable.</p><div class="scope"><b>Authority boundary:</b> emergency powers expire. Guardians cannot quietly convert temporary safety controls into permanent governance.</div></article>
+      </div>
+
+      <div class="trust-loop" aria-label="Gratus verification cycle">
+        <div class="loop-step">OBSERVE</div><div class="loop-step">EVIDENCE</div><div class="loop-step">VERIFY</div><div class="loop-step">CHALLENGE</div><div class="loop-step">CORRECT</div><div class="loop-step">APPEAL</div><div class="loop-step">LEARN</div>
+      </div>
+
+      <article class="glass receipt">
+        <div><div class="kicker">Gratus Receipt</div><h3>Evidence instead of a magic trust score.</h3><p>Every meaningful verification produces a portable receipt: what was reviewed, what evidence was considered, who reviewed it, what conflicts existed, what remained uncertain, when the finding expires, and how it can be challenged. Honor is behavior—not a badge.</p><div class="principle"><b>Core rule:</b> trust may be summarized, but the evidence trail must remain inspectable. No permanent universal score for a human being.</div></div>
+        <div class="receipt-grid"><div class="receipt-item"><b>Scope</b>Exactly what claim, steward, policy, or system was reviewed.</div><div class="receipt-item"><b>Evidence</b>Sources, samples, test methods, and provenance.</div><div class="receipt-item"><b>Reviewer</b>Guide identity, qualification, and independence.</div><div class="receipt-item"><b>Conflicts</b>Funding, relationships, incentives, recusals.</div><div class="receipt-item"><b>Finding</b>Verified, disputed, incomplete, corrected, or expired.</div><div class="receipt-item"><b>Recourse</b>Appeal path, minority report, and correction history.</div></div>
+      </article>
+      <div class="notice"><b>Platform example:</b> a Google-like or other large “Together” could expose a Gratus layer independent from its product and growth functions so communities can review stewardship, policy execution, and AI behavior. This is a design proposal—not a claim about Google, OpenAI, or any company’s actual hidden structure.</div>
+    </section>
+
+    <section id="ai-assurance" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">AI Accountability Layer</div><h2>Powerful AI needs<br>traceable stewardship.</h2></div><p>If AI systems become builders, moderators, recommenders, operators, or agents inside a Semble, accountability cannot dissolve into “the model did it.” The provider, deployer, steward, verifier, and affected human each need a visible role.</p></div>
+      <div class="ai-grid">
+        <article class="glass ai-card"><span class="pill">Gratus AI Assurance</span><h3>An accountability loop for AI systems.</h3><p>The goal is not to pretend every model is perfectly explainable. The goal is to make responsibility, evidence, limitations, deployment controls, and recourse legible enough that power can be challenged and improved.</p>
+          <div class="assurance-list">
+            <div class="assurance-row"><div class="idx">01</div><div><b>Declare purpose & boundary</b><span>What may the system do, for whom, with what data, and what is explicitly out of scope?</span></div></div>
+            <div class="assurance-row"><div class="idx">02</div><div><b>Publish capability & limitation evidence</b><span>Versioned evals, failure cases, uncertainty, known blind spots, and conditions where human review is required.</span></div></div>
+            <div class="assurance-row"><div class="idx">03</div><div><b>Red-team before privilege</b><span>The more consequential the action, the stronger the adversarial testing and permission boundary before deployment.</span></div></div>
+            <div class="assurance-row"><div class="idx">04</div><div><b>Log material actions</b><span>Keep enough provenance to reconstruct consequential decisions without turning surveillance into the default.</span></div></div>
+            <div class="assurance-row"><div class="idx">05</div><div><b>Watch incidents in production</b><span>Record failures, near misses, abuse patterns, reversals, mitigations, and model/version changes.</span></div></div>
+            <div class="assurance-row"><div class="idx">06</div><div><b>Guarantee human recourse</b><span>Affected people can challenge material outcomes, reach a responsible human, and receive correction when warranted.</span></div></div>
+            <div class="assurance-row"><div class="idx">07</div><div><b>Re-verify after change</b><span>Major model, data, policy, autonomy, or deployment changes invalidate stale assurances.</span></div></div>
+          </div>
+        </article>
+        <article class="glass ai-card"><span class="pill">Battle-tested boundaries</span><h3>Never let the verifier become the new ruler.</h3><p>An accountability layer creates power of its own. Gratus therefore needs structural limits from day one.</p>
+          <div class="guardrails"><div class="guardrail"><b>Two-key review</b>No single guide both investigates and makes the final contested determination.</div><div class="guardrail"><b>Conflict recusal</b>A verifier with meaningful financial or relational conflicts steps out.</div><div class="guardrail"><b>Rotating panels</b>High-impact systems are not permanently reviewed by the same closed circle.</div><div class="guardrail"><b>Minority reports</b>Dissenting reviewers may publish a reasoned alternate finding.</div><div class="guardrail"><b>Evidence expiry</b>Trust receipts expire when systems, policies, or material conditions change.</div><div class="guardrail"><b>No pay-for-praise</b>Payment can fund rigorous review, never a guaranteed positive finding.</div><div class="guardrail"><b>Privacy floor</b>Auditability does not justify collecting everything about everyone.</div><div class="guardrail"><b>Appeal beyond provider</b>Where stakes are high, recourse cannot terminate with the same operator that made the disputed decision.</div></div>
+          <div class="two-key"><b>AI-specific rule:</b> an AI system can help inspect evidence, run evals, summarize incidents, or detect inconsistencies—but it should not be the sole final authority over a contested decision materially affecting a person.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Three readings</div><h2>One model.<br>Three lenses.</h2></div><p>The same language can be useful at different levels of commitment. This protects curiosity without turning speculation into certainty.</p></div>
+      <div class="modes">
+        <article class="glass mode active"><span class="pill">01 · Practical</span><h3>Worlds as platforms & communities</h3><p>A “world” is a social or digital environment with rules, identity, incentives, stories, and boundaries. This is directly testable today.</p></article>
+        <article class="glass mode"><span class="pill">02 · Systems</span><h3>Worlds as nested institutions</h3><p>Families, companies, cities, online communities, networks, and protocols are nested systems that coordinate people and resources.</p></article>
+        <article class="glass mode"><span class="pill">03 · Speculative</span><h3>Worlds as literal simulations</h3><p>A philosophical hypothesis about nested simulated realities. Interesting to explore, but not currently established as fact by evidence.</p></article>
+      </div>
+    </section>
+
+    <section class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Failure Modes</div><h2>What could<br>go wrong.</h2></div><p>The strongest version of Semble is defined as much by what it prevents as what it enables.</p></div>
+      <div class="problems">
+        <article class="glass problem"><div class="problem-top"><h3>Provider capture</h3><span class="risk">Control risk</span></div><p>Infrastructure becomes so central that participants cannot realistically leave or negotiate.</p><div class="counter"><b>Countermove:</b> portability, federation, transparent dependencies, exit tests.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>Manufactured consensus</h3><span class="risk">Signal risk</span></div><p>Paid testers or coordinated groups become fake proof that “everyone agrees” or loves a product.</p><div class="counter"><b>Countermove:</b> pay for testing, never praise; publish methodology and disagreement.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>Reputation tyranny</h3><span class="risk">Trust risk</span></div><p>A single trust score becomes destiny, erasing context, growth, minority views, or second chances.</p><div class="counter"><b>Countermove:</b> plural dimensions, recency, evidence, appeals, no universal human score.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>Story capture</h3><span class="risk">Attention risk</span></div><p>Whoever controls the stage can define reality by controlling what is seen, repeated, rewarded, or ignored.</p><div class="counter"><b>Countermove:</b> provenance, context, plural stages, friction for amplification.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>Nested accountability collapse</h3><span class="risk">Governance risk</span></div><p>Every operator claims they were “just following the layer above,” leaving no one responsible.</p><div class="counter"><b>Countermove:</b> decision logs, named accountable stewards, local refusal rights.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>Epistemic drift</h3><span class="risk">Reality risk</span></div><p>A useful metaphor or simulation hypothesis gets treated as verified hidden infrastructure without evidence.</p><div class="counter"><b>Countermove:</b> explicit fact/model/story labels and reality checks built into the interface.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>Verifier capture</h3><span class="risk">Accountability risk</span></div><p>Guides become dependent on the very stewards or providers they are supposed to review, turning verification into theater.</p><div class="counter"><b>Countermove:</b> conflict disclosure, reviewer rotation, mixed funding, random assignment, recusal, and public receipts.</div></article>
+        <article class="glass problem"><div class="problem-top"><h3>AI responsibility laundering</h3><span class="risk">AI governance risk</span></div><p>Providers blame models, deployers blame providers, and operators blame automation until nobody owns the outcome.</p><div class="counter"><b>Countermove:</b> responsibility maps, versioned evals, incident logs, named deployment owners, and human appeal.</div></article>
+      </div>
+    </section>
+
+    <section id="first-movers" class="shell reveal">
+      <div class="section-head"><div><div class="kicker">First Movers</div><h2>Human signal<br>as a service.</h2></div><p>The immediate business wedge: builders need users. Semble can create an opt-in human signal network online and at physical events.</p></div>
+      <div class="loop"><div class="loop-step">BUILD</div><div class="loop-step">INVITE</div><div class="loop-step">USE</div><div class="loop-step">OBSERVE</div><div class="loop-step">SIGNAL</div><div class="loop-step">ITERATE</div><div class="loop-step">STORY</div></div>
+      <article class="glass first-card"><div><div class="pill"><span class="dot"></span> First Movers Sprint</div><h3 style="font-size:2rem;letter-spacing:-.04em;margin:16px 0 10px">Your first 25–100 real humans.</h3><p style="color:var(--muted);line-height:1.6;margin:0">A builder brings a product. First Movers use it in context, complete structured missions, surface breakpoints, record friction, and return qualitative + quantitative signal. The outcome is not “100 fans.” The outcome is <b style="color:white">100 informed interactions with reality.</b></p><div class="principle"><b>Semble rule:</b> sell honest use, structured feedback, and repeatable human signal. Never sell fake traction.</div></div>
+        <div class="metric-grid"><div class="metric"><strong>25–100</strong><span>opt-in users per sprint</span></div><div class="metric"><strong>3</strong><span>signal passes: first use / return / refer</span></div><div class="metric"><strong>1</strong><span>public learning report</span></div><div class="metric"><strong>0</strong><span>guaranteed praise</span></div></div>
+      </article>
+    </section>
+
+    <section class="shell reveal">
+      <div class="section-head"><div><div class="kicker">Mission</div><h2>What Semble<br>could help solve.</h2></div><p>These are the highest-leverage problems your vocabulary naturally points toward.</p></div>
+      <div class="axioms">
+        <article class="glass axiom"><span class="num">01 · COORDINATION</span><h3>Help strangers become a team without becoming a mob.</h3><p>Shared moves, explicit roles, reversible commitments, and visible disagreement.</p></article>
+        <article class="glass axiom"><span class="num">02 · TRUST</span><h3>Make trust legible without turning it into social credit.</h3><p>Evidence-rich profiles with plural signals, appeals, provenance, and context.</p></article>
+        <article class="glass axiom"><span class="num">03 · BUILDERS</span><h3>Give builders real humans before they have distribution.</h3><p>First Movers becomes infrastructure for testing, learning, and early community.</p></article>
+        <article class="glass axiom"><span class="num">04 · GOVERNANCE</span><h3>Make stewardship an earned practice instead of a throne.</h3><p>Term limits, transparent decisions, conflict-of-interest disclosure, and exit rights.</p></article>
+        <article class="glass axiom"><span class="num">05 · STORIES</span><h3>Keep narrative power from silently becoming control.</h3><p>Separate observation from interpretation, and interpretation from myth or worldbuilding.</p></article>
+        <article class="glass axiom"><span class="num">06 · SCALE</span><h3>Federate without flattening.</h3><p>Let many sembles coordinate while preserving local variation, autonomy, and voice.</p></article>
+        <article class="glass axiom"><span class="num">07 · ACCOUNTABILITY</span><h3>Create independent witnesses for powerful systems.</h3><p>Gratus Guides make claims, stewardship, corrections, and appeals legible without becoming a universal authority.</p></article>
+        <article class="glass axiom"><span class="num">08 · AI</span><h3>Keep responsibility attached to AI-mediated action.</h3><p>AI assurance links model behavior back to evidence, deployment owners, incidents, safeguards, and human recourse.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><div class="footer-inner"><div><h3>SEMBLE // MOVE AS MANY. STAY HUMAN.</h3><div class="tiny">A speculative systems codex for coordination, stewardship, human signal, Gratus verification, accountable AI, and nested worlds. “Simulation,” “world,” and “provider” are used here as modeling language unless otherwise evidenced. The map is designed to be forked.</div></div><div class="pill"><span class="dot"></span> THE MAP IS NOT THE TERRITORY</div></div></footer>
+
+  <script>
+    const obs=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    document.querySelectorAll('.node').forEach(n=>n.addEventListener('click',()=>{n.animate([{transform:'scale(1)'},{transform:'scale(1.035)'},{transform:'scale(1)'}],{duration:320})}));
+  </script>
+</body>
+</html>
